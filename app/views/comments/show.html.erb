@@ -1,2 +1,22 @@
-<h1>Comments#show</h1>
-<p>Find me in app/views/comments/show.html.erb</p>
+<div class="ui comments">
+  <h3 class="ui dividing header">Comments</h3>
+  <div class="comment">
+    <a class="avatar">
+      <img src="https://robohash.org/T.png">
+    </a>
+    <div class="content">
+      <a class="author"><%= User.first.first_name %></a>
+      <div class="metadata">
+      </div>
+      <div class="text">
+        HELLO WORLD
+      </div>
+      <div class="actions">
+        <i class="reply icon" action="reply"></i>
+      </div>
+    </div>
+  </div>
+    <div class="field">
+    </div>
+  <div class="ui primary submit labeled icon button">SUBMIT</div>
+</div>
