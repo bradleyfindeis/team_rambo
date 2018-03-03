@@ -15,14 +15,15 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.new(comment_params)
-      if @comment.save
-        redirect_to movies_path
-      else
-        render :new
-      end
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.create(comment_params)
+    @comment.user_id = current_user.id
+    if @comment.save
+      redirect_to @post
+    else
+      flash.now[:danger] = "error"
+    end
   end
-
   # def update
   #   if @comment.update()
   # end
