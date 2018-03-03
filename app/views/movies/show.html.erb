@@ -1,2 +1,6 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<h1><%= @movie.title %></h1>
+<h4>Duration: <%= @movie.duration %></h4>
+<h4>Genre: <%= @movie.genre %></h4>
+<h4>IMDb: <a href="<%= @movie.description %>"><%= @movie.description %></a></h4>
+<p>---- i frame here ----</p>
+<p>---- post placeholder ----</p>
