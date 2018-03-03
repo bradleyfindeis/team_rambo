@@ -3,7 +3,7 @@ class AccountsController < ApplicationController
 
   
     def index
-      redirect_to movies_path
+      
     end
   
     def show
