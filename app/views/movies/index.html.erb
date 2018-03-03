@@ -1,17 +1,18 @@
 
 <h1 class="ui header">Movies</h1>
 
-<div class="ui stretched grid">
-  <% @movies.each do |m| %>
-    <div class="sixteen wide mobile eight wide tablet four wide computer column">
-      <div class="ui card">
-        <div class="trailer">
-          <iframe src= "<%= m.trailer %>" ></iframe>
-        </div>
-        <div class="content">
-          <%= link_to m.title, movie_path(m) %>
+
+  <div class="ui three stackable cards">
+    <% @movies.each do |m| %>
+      <div class="sixteen wide mobile eight wide tablet four wide computer column">
+        <div class="ui card">
+          <div class="trailer">
+            <iframe src= "<%= m.trailer %>" ></iframe>
+          </div>
+          <div class="content">
+            <%= link_to m.title, movie_path(m) %>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
