@@ -5,11 +5,14 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-
-
 }
 
 .movie-trailer {
   width: 900px;
   height: 506.25px;
+}
+
+.index-thumb {
+  width: 100%;
+  height: auto;
 }
