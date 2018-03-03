@@ -4,11 +4,11 @@ class AccountsController < ApplicationController
     before_action :set_account, only: [:show, :edit, :update]
   
     def index
-      @accounts = current_user.accounts
       redirect_to movies_path
     end
   
     def show
+      
     end
   
     def new
@@ -49,4 +49,5 @@ class AccountsController < ApplicationController
       def account_params
         params.require(:account).permit(:name, :balance)
       end
-  end
+  end 
+end 
