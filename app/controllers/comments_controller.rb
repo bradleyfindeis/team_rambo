@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  before_action :set_account,
   # def index
   #   @comments = Comments.all
   # end
@@ -8,15 +9,13 @@ class CommentsController < ApplicationController
   end
 
   def new
-    @comment = Comment.new
+    @comment = @account.comments.new
   end
 
   def edit
   end
 
   def create
-    @post = Post.find(params[:post_id])
-    @comment = @post.comments.create(comment_params)
     @comment.user_id = current_user.id
     if @comment.save
       redirect_to @post
@@ -40,5 +39,9 @@ class CommentsController < ApplicationController
 
     def set_comment
       @comment = Comment.find(params[:id])
+    end
+
+    def set_account
+      @account = User.find(params[:id])
     end
 end

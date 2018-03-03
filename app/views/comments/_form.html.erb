@@ -1,23 +1,11 @@
 <div class="ui comments">
   <h3 class="ui dividing header">Comments</h3>
-  <div class="comment">
-    <a class="avatar">
-      <img src="https://robohash.org/T.png">
-    </a>
-    <div class="content">
-      <a class="author"><%= @user%></a>
-      <div class="metadata">
-      </div>
-      <div class="text">
-        HELLO WORLD
-      </div>
-      <div class="actions">
-        <i class="reply icon" action="reply"></i>
-      </div>
+    <div class="field">
+      <%= form_for @comment do |f| %>
+      <%= f.label :body %>
+      <%= f.text_area :body %>
+      <br />
+      <%= f.submit %>
+      <% end %>
     </div>
-  </div>
-      <div class="field">
-      <textarea></textarea>
-    </div>
-  <div class="ui primary submit labeled icon button">SUBMIT</div>
 </div>
