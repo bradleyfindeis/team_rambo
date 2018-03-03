@@ -1,6 +1,12 @@
+<div class="movie-page">
 <h1><%= @movie.title %></h1>
+<br />
+<h3>Trailer</3>
+<hr />
+  <iframe class = "movie-trailer" src= "<%= @movie.trailer %>" ></iframe>
 <h4>Duration: <%= @movie.duration %></h4>
 <h4>Genre: <%= @movie.genre %></h4>
 <h4>IMDb: <a href="<%= @movie.description %>"><%= @movie.description %></a></h4>
-<p>---- i frame here ----</p>
+
 <p>---- post placeholder ----</p>
+</div>
