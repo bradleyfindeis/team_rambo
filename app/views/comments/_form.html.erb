@@ -1,7 +1,7 @@
 <div class="ui comments">
   <h3 class="ui dividing header">Comments</h3>
     <div class="field">
-      <%= form_for @comment do |f| %>
+      <%= form_for [@movie, @comment] do |f| %>
       <%= f.label :body %>
       <%= f.text_area :body %>
       <br />
